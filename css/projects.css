@@ -1,0 +1,263 @@
+:root{
+    --dark-navy: #020c1b;
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --navy-shadow: rgba(2, 12, 27, 0.7);
+    --dark-slate: #495670;
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green : #64ffda;
+    --green-tint: rgba(100, 255, 218, 0.1);
+    --pink: #f57dff;
+    --blue: #57cbff;
+    --border-raduis: 4px;
+    --box-shadow: 4px 4px 0 0 var(--green); 
+    --fz-sm: 15px;
+    --fz-base: 18px;
+    --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+    --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+}
+
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/*  ----------------------------------- 
+            Hero Section
+    ---------------------------------
+*/
+
+.container {    
+    margin-top: 62px;
+    top: 55px;
+    padding-top: 60px;
+    width: 100%;
+    /* background-color: transparent; */
+    background-color: #0a192fdd;
+    z-index: 3;
+    position: absolute;
+    /* overflow: hidden; */
+}
+
+.hero-section-projects{
+    color: var(--lightest-slate);
+    background-color: transparent;
+    padding-right: 150px;
+    padding-left: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+.intro{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.intro .div-title-hero-section{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.intro .div-title-hero-section h1{
+    background-color: transparent;
+}
+.intro .div-title-hero-section .horizontal-bar{
+    background-color: transparent;
+    width: 35%;
+    border-top: 1px solid var(--lightest-navy);
+    margin-top: 25px;
+}
+.intro p{
+    background-color: transparent;
+    font-size: var(--fz-base);
+}
+
+
+
+/* 
+    Section project
+*/
+
+.div-projects{
+    background-color: transparent;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+}
+
+.project{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 14px;
+    text-align: right;
+    justify-content: center;
+}
+
+.project img{
+    width: 50%;
+    border-radius: var(--border-raduis);
+    object-fit: cover;
+}
+.project .description-project{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: end;
+    justify-content: center;
+}
+
+.project .description-project h2 a{
+    background-color: transparent;
+    color: var(--lightest-slate);
+    transition: 300ms all;
+}
+.project .description-project h2 a:hover, .project .description-project h2 a:active{
+    color: var(--green);
+}
+
+.project .description-project p{
+    background-color: var(--light-navy);
+    padding: 30px;
+    border-radius: var(--border-raduis);
+    margin-left: -15%;
+    font-size: var(--fz-sm);
+    position: relative;
+}
+
+.project .description-project .stacks-project{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+    background-color: transparent;
+}
+.project .description-project .stacks-project li, .project .description-project h2{
+    background-color: transparent;
+}
+
+.project .description-project .links-project{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.project .description-project .links-project a{
+    background-color: transparent;
+    color: var(--lightest-slate);
+    font-size: 20px;
+    transition: 300ms;
+}
+.project .description-project .links-project a:hover, .project .description-project .links-project a:active{
+    color: var(--green);
+}
+
+
+.project-2{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    font-size: 14px;
+    text-align: left;
+    justify-content: center;
+    
+}
+
+.project-2 img{
+    width: 50%;
+    border-radius: var(--border-raduis);
+    object-fit: cover;
+}
+.project-2 .description-project{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+    justify-content: center;
+}
+
+.project-2 .description-project h2 a{
+    background-color: transparent;
+    color: var(--lightest-slate);
+    transition: 300ms all;
+}
+.project-2 .description-project h2 a:hover, .project-2 .description-project h2 a:active{
+    color: var(--green);
+}
+
+.project-2 .description-project p{
+    background-color: var(--light-navy);
+    padding: 30px;
+    border-radius: var(--border-raduis);
+    margin-right: -15%;
+    font-size: var(--fz-sm);
+    position: relative;
+}
+
+.project-2 .description-project .stacks-project{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+    background-color: transparent;
+}
+.project-2 .description-project .stacks-project li, .project-2 .description-project h2{
+    background-color: transparent;
+}
+
+.project-2 .description-project .links-project{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.project-2 .description-project .links-project a{
+    background-color: transparent;
+    color: var(--lightest-slate);
+    font-size: 20px;
+    transition: 300ms;
+}
+.project-2 .description-project .links-project a:hover, .project-2 .description-project .links-project a:active{
+    color: var(--green);
+}
+
+
+/* 
+    Footer
+*/
+
+footer{
+    width: 100%;
+    display: flex;
+    /* background-color: #0a192fdd; */
+    background-color: transparent;
+    color: var(--lightest-slate);
+    /* position: absolute; */
+    /* bottom: -205vh; */
+    /* z-index: 3; */
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+footer a{
+    margin: auto;
+    font-size: 12px;
+    transition: 300ms;
+    color: var(--lightest-slate);
+}
+footer a:hover, footer a:active{
+    color: var(--green);
+}

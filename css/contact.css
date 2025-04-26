@@ -1,0 +1,197 @@
+:root{
+    --dark-navy: #020c1b;
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --navy-shadow: rgba(2, 12, 27, 0.7);
+    --dark-slate: #495670;
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green : #64ffda;
+    --green-tint: rgba(100, 255, 218, 0.1);
+    --pink: #f57dff;
+    --blue: #57cbff;
+    --border-raduis: 4px;
+    --box-shadow: 4px 4px 0 0 var(--green); 
+    --fz-sm: 15px;
+    --fz-base: 18px;
+    --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+    --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* 
+    Hero section
+*/
+
+.div-hero-section-contact{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* gap: 50px; */
+    justify-content: center;
+    background-color: transparent;
+}
+
+.intro-contact{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: start;
+    margin-bottom: 100px;
+}
+
+.intro-contact h1{
+    font-size: 50px;
+}
+
+.intro-contact h1, .intro-contact p{
+    background-color: transparent;
+    text-align: left;
+    color: var(--lightest-slate);
+}
+
+.intro-contact p{
+    font-size: var(--fz-base);
+}
+
+#btnMess{
+    background-color: transparent;
+    border: none;
+    color: var(--lightest-slate);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.div-form, .div-contact-details{
+    border: 1px solid var(--green);
+    border-radius: var(--border-raduis);
+    padding: 30px;
+}
+
+.div-form{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    justify-content: space-around;
+    gap: 30px;
+    width: 60%;
+}
+
+.div-form h1{
+    color: var(--lightest-slate);
+}
+
+.div-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: transparent;
+}
+
+form .div-inputs{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+form .format-input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--white);
+    width: 100%;
+}
+
+/* input:focus-within ~ label{
+    color: var(--green);
+} */
+
+.div-form form input, .div-form form textarea, .div-form form button{
+    padding: 12px;
+    border-radius: var(--border-raduis);
+    border: none;
+}
+
+.div-form form input, .div-form form textarea{
+    background-color: var(--white);
+}
+  
+.div-form form button{
+    border: 1px solid var(--green);
+    padding: 12px 8px;
+    background-color: transparent;
+    border-radius: 5px;
+    color: var(--green);
+    font-family: var(--font-mono);
+    width: 30%;
+    transition: 0.3s;
+} 
+
+.div-form form button:hover, .div-form form button:active{
+    box-shadow: var(--box-shadow);
+    transform: translate(-5px, -5px);
+}
+
+.div-form img{
+    width: 40%;
+    object-fit: cover;
+    padding: 20px;
+}
+
+
+/* 
+    Contact details : phone, email and others
+*/
+
+.div-contact-details{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 45%;
+    text-decoration: none;
+    border-radius: var(--border-raduis);
+    color: var(--lightest-slate);
+    height: 350px;
+    margin-left: 40px;
+}
+
+.contact-detail{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.contact-detail a {
+    text-decoration: none;
+    color: var(--lightest-slate);
+    transition: 0.3s all;
+    margin-top: 6px;
+}
+
+.contact-detail a:hover, .contact-detail a:active{
+    color: var(--green);
+}
+
+.contact-detail i {
+    border: 1px solid var(--green);
+    padding: 6px 8px;
+    background-color: transparent;
+    border-radius: 50%;
+    color: var(--green);
+    transition: 0.3s;
+}
+
+.contact-detail i:hover{
+    color: var(--green);
+    transition: 0.3s ease-out;
+    transform: translateX(-5px);
+}
