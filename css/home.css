@@ -38,25 +38,170 @@ body {
     z-index: 1;
     width: 100%;
     overflow-x: hidden;
+    overflow: auto;
+}
+
+.overflow-hidden{
+    overflow: hidden;
+}
+
+.blur-container{
+    filter: blur(5px);
+    transition: filter 0.6s ease;
+    overflow: hidden;
 }
 
 /*  ----------------------------------- 
-            Header
+            Hamburger
+    ---------------------------------
+*/
+.btn_hamburger{
+    background-color: transparent;
+    border: none;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    z-index: 100000;
+}
+
+.hamburger {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.hamburger .bar-hamburger {
+    height: 2px;
+    width: 100%;
+    background-color: var(--green);
+    border-radius: 10px;
+    position: absolute;
+}
+
+.hamburger .bar-hamburger:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+.hamburger .bar-hamburger:nth-child(2) {
+    top: 10px;
+    left: 0;
+}
+.hamburger .bar-hamburger:nth-child(3) {
+    top: 20px;
+    left: 0;
+} 
+
+.bar-hamburger:nth-child(1), .bar-hamburger:nth-child(3){
+    transform: rotate(0deg);
+    transition: transform 0.4s ease-in-out, top 0.4s 0.4s ease-in-out;
+}
+
+.bar-hamburger:nth-child(2){
+    transition: opacity 0.4s 0.4s ease-in-out;
+}
+
+.btn_hamburger.active .bar-hamburger:nth-child(1){
+    top: 10px;
+    transform: rotate(45deg);
+    transition: top 0.4s ease-in-out, transform 0.4s 0.4s ease-in-out;
+}
+.btn_hamburger.active .bar-hamburger:nth-child(2){
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+.btn_hamburger.active .bar-hamburger:nth-child(3){
+    top: 10px;
+    transform: rotate(-45deg);
+    transition: top 0.4s ease-in-out, transform 0.4s 0.4s ease-in-out;
+}
+
+/*  ----------------------------------- 
+            Section NavBar mobile
     ---------------------------------
 */
 
+aside{
+    position: absolute;
+    transition: 0.6s ease-in-out;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    background-color: var(--light-navy);
+    height: 100vh;
+    transform: translateX(100%);
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+}
+
+aside a {
+    font-family: var(--font-mono);
+    text-decoration: none;
+    color: var(--lightest-slate);
+    font-size: var(--fz-base);
+    text-align: center;
+}
+
+aside .cv-link{
+    width: 60%;
+    margin-top: 20px;
+}
+
+aside a:hover, aside a:active{
+    color: var(--green);
+}
+aside a span{
+    color: var(--green);
+    font-family: var(--font-mono);
+}
+
+.active-navbar-mobile{
+    transition: transform 0.4s ease-in-out;
+    transform: translateX(0);
+}
+
+
+
+/*  ----------------------------------- 
+                Header
+    ---------------------------------
+*/
 header {
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+    background-color: #0a192fdd;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 50px;
-    background-color: #0a192fdd;
-    position: absolute;
-    z-index: 3;
-    padding-right: 80px;
-    padding-left: 80px;
+    padding: 50px 80px 0px 80px;
+    backdrop-filter: blur(5px);
+    transition: transform 0.5s ease-in-out;
 }
+
+.header-hidden{
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
 a {
     text-decoration: none;
 }
@@ -78,15 +223,16 @@ a {
 }
 
 
-header nav {
+.header nav {
     display: flex;
     flex-direction: row;
     background-color: transparent;
-    gap: 20px;
+    gap: 8px;
     margin-top: 10px;
+    /* display: none; */
 }
 
-header nav a {
+.header nav a {
     font-size: 14px;
     letter-spacing: -0.5px;
     font-family: var(--font-mono);
@@ -94,28 +240,29 @@ header nav a {
     background-color: transparent;
 }
 
-header nav a:hover, header nav a:active {
+.header nav a:hover, .header nav a:active {
     color: var(--green);
     transition: 0.5s;
 }
 
-header nav a span {
+.header nav a span {
     color: var(--green);
     margin-left: 15px;
     background-color: transparent;
 }
 
-header nav .cv-link {
+.cv-link {
     border: 1px solid var(--green);
     margin-bottom: 25px;
     margin-top: -10px;
+    margin-left: 15px;
     padding: 12px 25px 8px 20px;
     border-radius: 5px;
     color: var(--green);
     transition: 0.3s;
 }
 
-header nav .cv-link:hover, header nav .cv-link:active {
+.cv-link:hover, .cv-link:active {
     box-shadow: var(--box-shadow);
     transform: translate(-5px, -5px);
 }
@@ -130,14 +277,13 @@ header nav .cv-link:hover, header nav .cv-link:active {
     border-radius: 50%;
     width: 500px;
     height: 500px;
-    background: rgba(255, 255, 255, 0.387);
+    background-color: #78d0f97b;
     z-index: 2;
-    position: absolute;
+    position: fixed;
     opacity: 0;
-    /* top: -250px;
-    left: -250px; */
-    left: 0;
     top: 0;
+    left: 0;
+    pointer-events: none;
     filter: blur(100px);
 }
 
@@ -146,11 +292,9 @@ header nav .cv-link:hover, header nav .cv-link:active {
     top: 55px;
     width: 100%;
     padding-top: 90px;
-    /* background-color: transparent; */
     background-color: #0a192fdd;
     z-index: 3;
     position: absolute;
-    /* overflow: hidden; */
 }
 
 .div-hero-section-home {
@@ -200,7 +344,7 @@ header nav .cv-link:hover, header nav .cv-link:active {
 }
 
 .hero-section-home .link-about-me{
-    width: 20%;
+    width: 200px;
 }
 
 .hero-section-home .salut {
@@ -313,7 +457,7 @@ header nav .cv-link:hover, header nav .cv-link:active {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 50%;
+    width: 55%;
     background-color: transparent;
 }
  
@@ -350,7 +494,7 @@ header nav .cv-link:hover, header nav .cv-link:active {
 }
 
 .left-about-me .link-about-me {
-    width: 30%;
+    width: 150px;
 }
 
 /* 
@@ -358,12 +502,12 @@ header nav .cv-link:hover, header nav .cv-link:active {
 */
 
 .div-about-me img {
-    width: 350px;
-    height: 350px;
+    width: 25%;
+    height: max-content;
     object-fit: cover;
     filter: drop-shadow(10px);
     border-radius: var(--border-raduis);
-    margin-top: 60px;
+    margin-top: 30px;
     box-shadow: rgb(179, 179, 197) 0px 0px 0px 2px inset, var(--navy) 15px 15px 0px -3px, var(--green) 15px 15px;
     transition: 0.3s;
 }
@@ -387,11 +531,12 @@ header nav .cv-link:hover, header nav .cv-link:active {
     justify-content: center;
     background-color: transparent;
     margin-bottom: 200px;
+    width: 100%;
 }
 
 .contact-me h1, .contact-me p{
     text-align: center;
-    padding: 0 160px;
+    padding: 0 100px;
 }
 
 .contact-me h1{
@@ -457,9 +602,6 @@ footer a:hover, footer a:active{
                 Animations
     -----------------------------------
 */
-@keyframes identifier {
-    
-}
 
 
 
@@ -472,3 +614,76 @@ footer a:hover, footer a:active{
     -----------------------------------
 */
 
+@media screen and (max-width: 768px) {
+    .header{
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .header nav{
+        display: none;
+    }
+
+    .btn_hamburger{
+        display: block;
+    }
+
+    .container{
+        padding-top: 40px;
+        margin-top: 42px;
+    }
+
+    .hero-section-home {
+        padding-left: 50px;
+        padding-right: 40px;
+    }
+    .hero-section-home p{
+        width: 100%;
+    }
+
+    .socials-networks{
+        display: none;
+    }
+    .email-address{
+        display: none;
+    }
+
+    .div-about-me{
+        flex-direction: column;
+        margin-top: 130px;
+    }
+    .left-about-me{
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+        /* gap: 10px;   */
+    }
+    .left-about-me .title-about-me-home .horizontal-bar {
+        margin-top: 24px;
+    }
+
+    .div-about-me img{
+        width: 50%;
+        margin: auto;
+    }
+
+    .contact-me {
+        padding: 60px 40px;
+        
+    }
+
+    .contact-me h1, .contact-me p {
+        padding: 0px;
+    }
+
+    .contact-me h1{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .horizontal-bar {
+        display: none;
+    }   
+}

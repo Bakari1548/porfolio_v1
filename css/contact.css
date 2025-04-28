@@ -24,7 +24,6 @@
 .container{
     display: flex;
     flex-direction: column;
-    gap: 40px;
 }
 
 /* 
@@ -35,9 +34,15 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    /* gap: 50px; */
     justify-content: center;
     background-color: transparent;
+}
+
+.main-contact {
+    display: flex; 
+    flex-direction: column; 
+    padding: 0px 150px; 
+    margin-bottom: 230px;
 }
 
 .intro-contact{
@@ -49,8 +54,24 @@
     margin-bottom: 100px;
 }
 
-.intro-contact h1{
-    font-size: 50px;
+.title-contact{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.title-contact h1{
+    color: var(--lightest-slate);
+    font-size: 35px;
+    background-color: transparent;
+}
+
+.title-contact .horizontal-bar {
+    background-color: transparent;
+    width: 60%;
+    border-top: 1px solid var(--lightest-navy);
+    margin-top: 27px;
 }
 
 .intro-contact h1, .intro-contact p{
@@ -100,7 +121,15 @@
 form .div-inputs{
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 10px;
+    width: 100%;
+}
+
+form .div-inputs .format-input {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 form .format-input{
@@ -139,12 +168,6 @@ form .format-input{
 .div-form form button:hover, .div-form form button:active{
     box-shadow: var(--box-shadow);
     transform: translate(-5px, -5px);
-}
-
-.div-form img{
-    width: 40%;
-    object-fit: cover;
-    padding: 20px;
 }
 
 
@@ -194,4 +217,39 @@ form .format-input{
     color: var(--green);
     transition: 0.3s ease-out;
     transform: translateX(-5px);
+}
+
+
+/* 
+    -----------------------------------
+                Media Queries
+    -----------------------------------
+*/
+
+@media screen and (max-width: 900px) {
+    .div-hero-section-contact {
+        display: flex;
+        flex-direction: column;
+        gap: 90px;
+    }
+
+    .div-form, .div-contact-details{
+        width: 100%;
+        margin-left: 0px;
+        justify-content: center;
+    }
+
+    .title-contact .horizontal-bar {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-contact {
+        padding: 0 40px;
+    }
+
+    .title-contact .horizontal-bar {
+        width: 30%;
+    }
 }

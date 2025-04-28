@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
     <link rel="icon" href="../images/logo.png" />
-    <title>Mon porfolio | A propos de moi</title>
+    <title>Bakary Sagna | A propos de moi</title>
     <link rel="stylesheet" href="../css/about_me.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,14 +15,30 @@
 </head>
 <body>
     <header>
-        <a href="#" class="link-home">Bkr</a>
-        <nav>
-            <a href="./index.html"><span>01. </span>Accueil</a>
-            <a href="./about_me.html" style="color: #64ffda;"><span>02. </span>A propos</a>
-            <a href="./projects.html"><span>03. </span>Mes projets</a>
-            <a href="./contact.html"><span>04. </span>Contact</a>
-            <a href="../CV_Bakary.pdf" class="cv-link" target="_blank">CV</a>
-        </nav>
+        <div class="header">
+            <a href="./index.html" class="link-home">Bkr</a>
+            <nav>
+                <a href="./index.html"><span>01. </span>Accueil</a>
+                <a href="./about_me.html" style="color: #64ffda;"><span>02. </span>A propos</a>
+                <a href="./projects.html"><span>03. </span>Mes projets</a>
+                <a href="./contact.html"><span>04. </span>Contact</a>
+                <a href="../CV_Bakary.pdf" class="cv-link" target="_blank">CV</a>
+            </nav>
+            <button class="btn_hamburger box" aria-label="toggle navigation">
+                <span class="hamburger">
+                    <span class="bar-hamburger"></span>
+                    <span class="bar-hamburger"></span>
+                    <span class="bar-hamburger"></span>
+                </span>
+            </button>
+            <aside>
+                <a href="./index.html"><span>01. <br></span>Accueil</a>
+                <a href="./about_me.html"><span>02. <br></span>A propos</a>
+                <a href="./projects.html"><span>03. <br></span>Mes projets</a>
+                <a href="./contact.html"><span>04. <br></span>Contact</a>
+                <a href="../CV_Bakary.pdf" class="cv-link" target="_blank">CV</a>
+            </aside>
+        </div>
     </header>
     <div id="cardCircle"></div>
     <div class="container">
@@ -37,7 +53,11 @@
             </div>
             <div class="hero-section_about_me">
                 <div class="text-intro-hero-section">
-                    <h1 class="title-about-me">Développeur Web Junior Passionné<br></h1>
+                    <!-- <h1 class="title-about-me"><br></h1> -->
+                    <div class="title-about-me">
+                        <h1>Développeur Web Junior Passionné</h1>
+                        <p class="horizontal-bar"></p>
+                    </div>
                     <p class="text-about-me">
                         Je suis un développeur web junior passionné par la création d'expériences numériques captivantes et fonctionnelles. Mon parcours m'a permis de développer des compétences solides dans le développement front-end et back-end, en utilisant des technologies modernes et des bonnes pratiques. <br><br>
                         En front-end, je maîtrise HTML, CSS et JavaScript, ainsi que des frameworks comme React pour concevoir des interfaces utilisateur dynamiques et réactives. En back-end, j'ai acquis de l'expérience avec Node.js et Express, me permettant de construire des API robustes et des applications web performantes. <br><br>

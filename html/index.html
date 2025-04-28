@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
     <link rel="icon" href="../images/logo.png" />
-    <title>Mon porfolio | Accueil</title>
+    <title>Bakary Sagna | Accueil</title>
     <link rel="stylesheet" href="../css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,14 +14,30 @@
 </head>
 <body>
     <header>
-        <a href="#" class="link-home">Bkr</a>
-        <nav>
-            <a href="./index.html" style="color: #64ffda;"><span>01. </span>Accueil</a>
-            <a href="./about_me.html"><span>02. </span>A propos</a>
-            <a href="./projects.html"><span>03. </span>Mes projets</a>
-            <a href="./contact.html"><span>04. </span>Contact</a>
-            <a href="../CV_Bakary.pdf" class="cv-link" target="_blank">CV</a>
-        </nav>
+        <div class="header">
+            <a href="./index.html" class="link-home">Bkr</a>
+            <nav>
+                <a href="./index.html" style="color: #64ffda;"><span>01. </span>Accueil</a>
+                <a href="./about_me.html"><span>02. </span>A propos</a>
+                <a href="./projects.html"><span>03. </span>Mes projets</a>
+                <a href="./contact.html"><span>04. </span>Contact</a>
+                <a href="../CV_Bakary.pdf" class="cv-link" target="_blank">CV</a>
+            </nav>
+            <button class="btn_hamburger box" aria-label="toggle navigation">
+                <span class="hamburger">
+                    <span class="bar-hamburger"></span>
+                    <span class="bar-hamburger"></span>
+                    <span class="bar-hamburger"></span>
+                </span>
+            </button>
+            <aside>
+                <a href="./index.html"><span>01. <br></span>Accueil</a>
+                <a href="./about_me.html"><span>02. <br></span>A propos</a>
+                <a href="./projects.html"><span>03. <br></span>Mes projets</a>
+                <a href="./contact.html"><span>04. <br></span>Contact</a>
+                <a href="../CV_Bakary.pdf" class="cv-link" target="_blank">CV</a>
+            </aside>
+        </div>
     </header>
     <div id="cardCircle"></div>
     <div class="container">
@@ -43,7 +59,6 @@
                     Mon objectif est de créer des expériences utilisateur intuitives 
                     en combinant créativité et expertise technique.
                 </p>
-
                 <a class="link-about-me" href="./about_me.html">En savoir plus</a>
             </div>
             <div class="email-address">
