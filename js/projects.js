@@ -67,13 +67,11 @@ container.addEventListener('click', () => {
 
 
 let scrollFromTop = document.documentElement.scrollTop
-// console.log('position hors fonction : ', scrollFromTop);
-
+=
 document.addEventListener('scroll', handleScrolling)
 
 function handleScrolling() {
     const currentScroll = document.documentElement.scrollTop
-    // console.log('position dans la fonction : ',currentScroll);
     
     if(currentScroll > scrollFromTop && currentScroll > 160) {
         // console.log("Scrolling DOWN")
@@ -95,28 +93,82 @@ datasCards.map((datasCard, index) => (
     divProjects.innerHTML += index % 2 === 0 
                                 ?
                                     `<div class="project">
-                                        <img src=${datasCard.image} alt=${datasCard.name}>
+                                        <img 
+                                            src=${datasCard.image} 
+                                            alt=${datasCard.name}
+                                            data-aos="fade-right" 
+                                            data-aos-duration="500" 
+                                            data-aos-easing="ease-in-out" 
+                                            data-aos-delay="1050"
+                                            >
                                         <div class="description-project">
-                                            <h2> <a href=${datasCard.link}>${datasCard.name}</a></h2>
-                                            <p>${datasCard.descrition}</p>
-                                            <ul class="stacks-project">
+                                            <h2
+                                                data-aos="fade-left" 
+                                                data-aos-duration="500" 
+                                                data-aos-easing="ease-in-out" 
+                                                data-aos-delay="1400"
+                                            ><a href=${datasCard.link}>${datasCard.name}</a></h2>
+                                            <p
+                                                data-aos="fade-left" 
+                                                data-aos-duration="500" 
+                                                data-aos-easing="ease-in-out" 
+                                                data-aos-delay="1200"
+                                            >${datasCard.descrition}</p>
+                                            <ul class="stacks-project"
+                                                data-aos="fade-left" 
+                                                data-aos-duration="500" 
+                                                data-aos-easing="ease-in-out" 
+                                                data-aos-delay="100"
+                                            >
                                                 <li>${datasCard.stacks.join(' | ')}</li>
                                             </ul>
-                                            <div class="links-project">
+                                            <div class="links-project"
+                                                data-aos="fade-left" 
+                                                data-aos-duration="500" 
+                                                data-aos-easing="ease-in-out" 
+                                                data-aos-delay="100"
+                                            >
                                                 <a href=${datasCard.linkGitHub}><i class="bi bi-github"></i></a>
                                                 <a href=${datasCard.link}><i class="bi bi-box-arrow-up-right"></i></a>
                                             </div>
                                         </div>
                                     </div>`
                                 :  ` <div class="project-2">
-                                        <img src=${datasCard.image} alt=${datasCard.name}>
+                                        <img 
+                                            src=${datasCard.image} 
+                                            alt=${datasCard.name}
+                                            data-aos="fade-left" 
+                                            data-aos-duration="500" 
+                                            data-aos-easing="ease-in-out" 
+                                            data-aos-delay="1050"    
+                                        >
                                         <div class="description-project">
-                                            <h2> <a href=${datasCard.link}>${datasCard.name}</a></h2>
-                                            <p>${datasCard.descrition}</p>
-                                            <ul class="stacks-project">
+                                            <h2
+                                                data-aos="fade-rigth" 
+                                                data-aos-duration="500" 
+                                                data-aos-easing="ease-in-out" 
+                                                data-aos-delay="1400"
+                                            > <a href=${datasCard.link}>${datasCard.name}</a></h2>
+                                            <p
+                                                data-aos="fade-right" 
+                                                data-aos-duration="500" 
+                                                data-aos-easing="ease-in-out" 
+                                                data-aos-delay="1200"
+                                            >${datasCard.descrition}</p>
+                                            <ul class="stacks-project"
+                                                data-aos="fade-right" 
+                                                data-aos-duration="500" 
+                                                data-aos-easing="ease-in-out" 
+                                                data-aos-delay="100"
+                                            >
                                                 <li>${datasCard.stacks.join(' | ')}</li>
                                             </ul>
-                                            <div class="links-project">
+                                            <div class="links-project"
+                                                data-aos="fade-right" 
+                                                data-aos-duration="500" 
+                                                data-aos-easing="ease-in-out" 
+                                                data-aos-delay="100"
+                                            >
                                                 <a href=${datasCard.linkGitHub}><i class="bi bi-github"></i></a>
                                                 <a href=${datasCard.link}><i class="bi bi-box-arrow-up-right"></i></a>
                                             </div>

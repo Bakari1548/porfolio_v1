@@ -37,13 +37,11 @@ container.addEventListener('click', () => {
 })
 
 let scrollFromTop = document.documentElement.scrollTop
-// console.log('position hors fonction : ', scrollFromTop);
 
 document.addEventListener('scroll', handleScrolling)
 
 function handleScrolling() {
     const currentScroll = document.documentElement.scrollTop
-    // console.log('position dans la fonction : ',currentScroll);
     
     if(currentScroll > scrollFromTop && currentScroll > 160) {
         // console.log("Scrolling DOWN")
@@ -58,3 +56,9 @@ function handleScrolling() {
 
     scrollFromTop = document.documentElement.scrollTop
 }
+
+window.addEventListener('DOMContentLoaded', loader)
+
+function loader() {
+
+}   

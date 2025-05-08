@@ -5,6 +5,8 @@ const navBarMobile = document.querySelector('aside')
 const body = document.querySelector('body') 
 const header = document.querySelector('header') 
 const divHeader = document.querySelector('.header') 
+const form = document.querySelector('form')
+let scrollFromTop = document.documentElement.scrollTop
 
 
 if(window.matchMedia("(pointer:fine)").matches) {
@@ -38,14 +40,10 @@ container.addEventListener('click', () => {
 })
 
 
-let scrollFromTop = document.documentElement.scrollTop
-// console.log('position hors fonction : ', scrollFromTop);
-
 document.addEventListener('scroll', handleScrolling)
 
 function handleScrolling() {
     const currentScroll = document.documentElement.scrollTop
-    // console.log('position dans la fonction : ',currentScroll);
     
     if(currentScroll > scrollFromTop && currentScroll > 160) {
         // console.log("Scrolling DOWN")
@@ -59,4 +57,22 @@ function handleScrolling() {
     }
 
     scrollFromTop = document.documentElement.scrollTop
+}
+
+form.addEventListener('submit', handleSubmit)
+
+function handleSubmit(e) {
+    e.preventDefault()
+    const name = document.getElementById('nameInput').value;
+    const email = document.getElementById('emailInput').value;
+    const message = document.getElementById('messageInput').value;
+    const messageError = document.querySelector('.message-error');
+
+    if(name === '' || email === '' || message === ''){        
+        messageError.textContent = 'Veuillez remplir tous les champs'
+    } else {
+        const mailto = `mailto:${email}+?subject=Message depuis votre porfolio&body=Salut, je m'appelle ${name} et voici mon message : ${message}`
+        location.href = mailto;
+    }
+    
 }

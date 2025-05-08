@@ -215,9 +215,11 @@ a {
     border: 1px solid var(--green);
     padding: 10px 20px;
     margin-bottom: 25px;
+    transition: 0.5s;
 }
 
 .link-home:hover, .link-home:active {
+    transition: 0.5s;
     box-shadow: var(--box-shadow);
     transform: translate(-5px, -5px);
 }
