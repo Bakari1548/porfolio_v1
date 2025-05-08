@@ -1,0 +1,75 @@
+.div-animation{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #020c1b;
+    padding: 50px;
+    display: flex;
+    opacity: 0;
+}
+
+.div-text{
+    border: 2px solid #64ffda;
+    color: #64ffda;
+    padding: 10px;
+    border-radius: 12px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.loader {
+    height: 80px;
+    width: 100px;
+    aspect-ratio: 1;
+    padding: 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    --c:no-repeat linear-gradient(#04ebc5 0 0);
+    background:
+    var(--c) 0 0,
+    var(--c) 100% 0,
+    var(--c) 100% 100%,
+    var(--c) 0 100%;
+    position: relative;
+    filter: blur(0px);
+    animation: 
+      l2-1 3s ease-in-out normal,
+      l2-2 3s normal;
+}
+
+.loader h1{
+    color: #04ebc5;
+    font-size: 30px;
+    height: 72px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background-color: #020c1b;
+    animation: appear 2s none;
+    animation-delay: 2s;
+}
+
+
+@keyframes l2-1 {
+    0%   {background-size: 0    4px,4px 0   ,0    4px,4px 0  ;}
+    12.5%{background-size: 100% 4px,4px 0   ,0    4px,4px 0   }
+    25%  {background-size: 100% 4px,4px 100%,0    4px,4px 0   }
+    37.5%{background-size: 100% 4px,4px 100%,100% 4px,4px 0   }
+    50%,
+    100% {background-size: 100% 4px,4px 100%,100% 4px,4px 100%;}
+}
+
+
+@keyframes appear {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+

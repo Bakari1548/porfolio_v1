@@ -132,9 +132,6 @@
 .card{
     background-color: var(--light-navy);
     color: var(--lightest-slate);
-    /* max-width: 30%;
-    min-width: 200px;
-    max-height: 350px; */
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -142,6 +139,15 @@
     justify-content: space-around;
     gap: 18px;
 }
+.card:hover, .card:active {
+    transform: translateY(-10px);
+    transition: 0.5s;
+}
+
+.card:hover.card h3{
+    color: var(--green);
+}
+
 .card img{
     background-color: transparent;
     width: 45px;
@@ -188,35 +194,6 @@
     background-color: var(--lightest-slate);
     height: 3px;
     border-radius: 8px;
-}
-
-
-/* 
-    Footer
-*/
-
-footer{
-    width: 100%;
-    display: flex;
-    /* background-color: #0a192fdd; */
-    background-color: transparent;
-    color: var(--lightest-slate);
-    position: absolute;
-    bottom: -370vh;
-    z-index: 3;
-    /* inset: 0;  */
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-footer a{
-    margin: auto;
-    font-size: 12px;
-    transition: 300ms;
-    color: var(--lightest-slate);
-    background-color: transparent;
-}
-footer a:hover, footer a:active{
-    color: var(--green);
 }
 
 

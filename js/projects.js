@@ -99,20 +99,20 @@ datasCards.map((datasCard, index) => (
                                             data-aos="fade-right" 
                                             data-aos-duration="500" 
                                             data-aos-easing="ease-in-out" 
-                                            data-aos-delay="1050"
+                                            data-aos-delay="850"
                                             >
                                         <div class="description-project">
                                             <h2
                                                 data-aos="fade-left" 
                                                 data-aos-duration="500" 
                                                 data-aos-easing="ease-in-out" 
-                                                data-aos-delay="1400"
+                                                data-aos-delay="1200"
                                             ><a href=${datasCard.link}>${datasCard.name}</a></h2>
                                             <p
                                                 data-aos="fade-left" 
                                                 data-aos-duration="500" 
                                                 data-aos-easing="ease-in-out" 
-                                                data-aos-delay="1200"
+                                                data-aos-delay="1000"
                                             >${datasCard.descrition}</p>
                                             <ul class="stacks-project"
                                                 data-aos="fade-left" 
@@ -140,20 +140,20 @@ datasCards.map((datasCard, index) => (
                                             data-aos="fade-left" 
                                             data-aos-duration="500" 
                                             data-aos-easing="ease-in-out" 
-                                            data-aos-delay="1050"    
+                                            data-aos-delay="850"    
                                         >
                                         <div class="description-project">
                                             <h2
                                                 data-aos="fade-rigth" 
                                                 data-aos-duration="500" 
                                                 data-aos-easing="ease-in-out" 
-                                                data-aos-delay="1400"
+                                                data-aos-delay="1200"
                                             > <a href=${datasCard.link}>${datasCard.name}</a></h2>
                                             <p
                                                 data-aos="fade-right" 
                                                 data-aos-duration="500" 
                                                 data-aos-easing="ease-in-out" 
-                                                data-aos-delay="1200"
+                                                data-aos-delay="1000"
                                             >${datasCard.descrition}</p>
                                             <ul class="stacks-project"
                                                 data-aos="fade-right" 

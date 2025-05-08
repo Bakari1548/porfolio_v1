@@ -57,8 +57,27 @@ function handleScrolling() {
     scrollFromTop = document.documentElement.scrollTop
 }
 
-window.addEventListener('DOMContentLoaded', loader)
+window.addEventListener('load', loader)
 
 function loader() {
+    const animationLoader = document.querySelector('.div-animation')
+    body.style.overflow = 'hidden'
+    container.style.opacity = '0'
+    header.style.opacity = '0'
+    cardCircle.style.display = 'none'
+    animationLoader.style.opacity = '1'
 
+    setTimeout(() => {
+        animationLoader.style.opacity = '0'
+        animationLoader.style.transition = '1s'
+    }, 3000)
+    
+    setTimeout(() => {
+        body.style.overflow = 'auto'
+        container.style.opacity = '1'
+        header.style.opacity = '1'
+        cardCircle.style.display = 'block'
+        animationLoader.style.transition = '1s'
+        
+    }, 4500)
 }   

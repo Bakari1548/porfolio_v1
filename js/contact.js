@@ -71,7 +71,8 @@ function handleSubmit(e) {
     if(name === '' || email === '' || message === ''){        
         messageError.textContent = 'Veuillez remplir tous les champs'
     } else {
-        const mailto = `mailto:${email}+?subject=Message depuis votre porfolio&body=Salut, je m'appelle ${name} et voici mon message : ${message}`
+        const mailto = `mailto:bkrsagna03@gmail.com?subject=Message depuis votre porfolio&body=Salut, je m'appelle ${name} et voici mon message : ${message}`
+        // const mailto = `mailto:${email}`
         location.href = mailto;
     }
     

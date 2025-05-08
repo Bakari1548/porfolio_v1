@@ -586,6 +586,8 @@ footer{
     z-index: 4;
     padding-top: 30px;
     padding-bottom: 30px;
+    flex-direction: column;
+    
 }
 footer a{
     margin: auto;
@@ -598,13 +600,18 @@ footer a:hover, footer a:active{
     color: var(--green);
 }
 
+footer .links-networks-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    align-content: center;
+    display: none;
+}
 
-/* 
-    ----------------------------------- 
-                Animations
-    -----------------------------------
-*/
-
+.links-networks-footer a {
+    font-size: 20px;
+    margin: 0px 20px;    
+}
 
 
 
@@ -681,6 +688,16 @@ footer a:hover, footer a:active{
 
     .contact-me h1{
         font-size: 40px;
+    }
+
+    footer{
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .links-networks-footer{
+        display: block;
     }
 }
 
