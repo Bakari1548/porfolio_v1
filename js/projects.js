@@ -33,7 +33,16 @@ const datasCards = [
         linkGitHub: "https://github.com/Bakari1548/wommate-site",
         stacks: [ "ReactJS", "TailwindCSS", "AOS animation", "Swiper" ]
     },
+    {
+        name: "AHS Smart-Tech",
+        descrition: "Site vitrine d'une entreprise de vente de matériel IoT et des solutions domotiques.",
+        image: "../images/ahs_smart-tech.png",
+        link: "https://ahs-smart-tech.vercel.app/", 
+        linkGitHub: "",
+        stacks: [ "ReactJS", "TailwindCSS", "Material UI" ]
+    },
 ]
+
 
 if(window.matchMedia("(pointer:fine)").matches) {
     container.addEventListener('mousemove', handleMouseMove)

@@ -43,16 +43,16 @@ document.addEventListener('scroll', handleScrolling)
 function handleScrolling() {
     const currentScroll = document.documentElement.scrollTop
     
-    if(currentScroll > scrollFromTop && currentScroll > 160) {
-        // console.log("Scrolling DOWN")
-        header.style.transform = 'translateY(-100%)'
-        header.style.transition = 'transform 0.5s ease-in-out'
-    }
-    else{
-        // console.log("Srolling UP")
-        header.style.transform = 'translateY(0)'
-        header.style.transition = 'transform 0.5s ease-in-out'
-    }
+        if(currentScroll > scrollFromTop && currentScroll > 160) {
+            // console.log("Scrolling DOWN")
+            header.style.transform = 'translateY(-100%)'
+            header.style.transition = 'transform 0.5s ease-in-out'
+        }
+        else{
+            // console.log("Srolling UP")
+            header.style.transform = 'translateY(0)'
+            header.style.transition = 'transform 0.5s ease-in-out'
+        }
 
     scrollFromTop = document.documentElement.scrollTop
 }
