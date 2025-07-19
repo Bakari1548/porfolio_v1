@@ -137,8 +137,8 @@ datasCards.map((datasCard, index) => (
                                                 data-aos-easing="ease-in-out" 
                                                 data-aos-delay="100"
                                             >
-                                                <a href=${datasCard.linkGitHub}><i class="bi bi-github"></i></a>
-                                                <a href=${datasCard.link}><i class="bi bi-box-arrow-up-right"></i></a>
+                                                <a href=${datasCard.linkGitHub} target="_blank"><i class="bi bi-github"></i></a>
+                                                <a href=${datasCard.link} target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
                                             </div>
                                         </div>
                                     </div>`
